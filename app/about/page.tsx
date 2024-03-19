@@ -8,7 +8,7 @@ export default function About() {
           Hi, My name is Caro Adamska
         </h1>
       </div>
-      <div className="w-full md:w-1/2 md:pr-4">
+      <div className="lg:float-right lg:text-right lg:w-1/2 lg:pr-4 lg:mb-0 sm:text-center">
         <Image
           width={572}
           height={564}
