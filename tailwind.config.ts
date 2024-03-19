@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '73': '73px',
+      },
+      colors: {
+        salmon: "#F9A39B",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
