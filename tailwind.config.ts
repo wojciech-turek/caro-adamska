@@ -20,6 +20,7 @@ const config = {
     extend: {
       spacing: {
         '73': '73px',
+        '100': '100px',
       },
       colors: {
         salmon: "#F9A39B",
