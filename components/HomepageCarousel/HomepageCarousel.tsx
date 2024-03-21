@@ -17,13 +17,13 @@ interface HomepageCarouselProps {
 const HomepageCarousel = ({ title, url }: HomepageCarouselProps) => {
   return (
     <div className="container mx-auto">
-      <h3 className="text-4xl font-medium text-center mb-6">{title}</h3>
+      <h3 className="text-4xl font-medium text-center ">{title}</h3>
 
       <Carousel
         opts={{
           align: "start",
         }}
-        className="w-full"
+        className="w-full mb-100"
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
