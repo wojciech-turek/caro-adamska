@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-wrap justify-center pt-16 pb-24 max-w-7xl mx-auto">
+    <>
       <div className="w-full text-center mb-114">
         <h1 className="text-4xl mb-24 font-medium">
           Hi, My name is Caro Adamska
@@ -55,6 +55,6 @@ export default function About() {
           something unforgettable.
         </p>
       </div>
-    </div>
+    </>
   );
 }
