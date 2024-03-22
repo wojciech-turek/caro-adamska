@@ -4,11 +4,9 @@ import { PortableText } from "@portabletext/react";
 
 async function getData() {
   const query = `
-  *[_type == 'about'] {
-    aboutTitle,
-      content,
-      aboutImage
-  }[0]
+    *[_type == 'about'] {
+      title, content, image
+    }[0]
   `;
 
   const data = await client.fetch(query);
@@ -16,9 +14,9 @@ async function getData() {
 }
 
 interface AboutData {
-  aboutTitle: string;
+  title: string;
   content: any;
-  aboutImage: string;
+  image: string;
 }
 
 export default async function About() {
@@ -27,14 +25,14 @@ export default async function About() {
   return (
     <>
       <div className="w-full text-center mb-114">
-        <h1 className="text-4xl mb-24 font-medium">{data.aboutTitle}</h1>
+        <h1 className="text-4xl mb-24 font-medium">{data.title}</h1>
       </div>
       <div className="lg:float-right lg:text-right lg:w-1/2 lg:pr-4 lg:mb-0 sm:text-center">
         <Image
           width={572}
           height={564}
-          src={urlFor(data.aboutImage).url()}
-          alt={data.aboutTitle}
+          src={urlFor(data.image).url()}
+          alt={data.title}
           className="float-right rounded-lg overflow-hidden"
         />
       </div>

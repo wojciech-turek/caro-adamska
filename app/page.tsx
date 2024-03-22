@@ -1,4 +1,4 @@
-import HomepageCarousel from "@/components/HomepageCarousel/HomepageCarousel";
+import MainPageCarousel from "@/components/MainPageCarousel/MainPageCarousel";
 import Contact from "@/components/contact/contact";
 import Introduction from "@/components/introduction/introduction";
 import Reviews from "@/components/reviews/reviews";
@@ -8,18 +8,18 @@ export default function Home() {
     <>
       <Introduction />
 
-      <HomepageCarousel title={"Publications"} url={"/publications"} />
+      <MainPageCarousel title={"Publications"} url={"/publications"} />
 
-      <HomepageCarousel
+      <MainPageCarousel
         title={"Commercial collabs"}
         url={"/commecial-collabs"}
       />
-      <HomepageCarousel
+      <MainPageCarousel
         title={"Personal projects"}
         url={"/personal-projects"}
       />
 
-      {/* <Reviews /> */}
+      <Reviews />
 
       <Contact />
     </>
