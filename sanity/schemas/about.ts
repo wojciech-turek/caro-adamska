@@ -1,17 +1,17 @@
 export default {
     name: 'about',
     type: 'document',
-    title: 'About',
+    title: 'About Page',
     fields: [
         {
-            name: 'aboutTitle',
+            name: 'title',
             type: 'string',
-            title: 'About title'
+            title: 'Title'
         },
         {
-            name: 'aboutImage',
+            name: 'image',
             type: 'image',
-            title: 'About Image'
+            title: 'Image'
         },
         {
             name: 'content',
