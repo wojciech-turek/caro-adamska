@@ -7,17 +7,17 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
-import style from "./homapageCarousel.module.scss";
+import style from "./MainPageCarousel.module.scss";
 
-interface HomepageCarouselProps {
+interface MainPageCarouselProps {
   title: string;
   url: string;
 }
 
-const HomepageCarousel = ({ title, url }: HomepageCarouselProps) => {
+const MainPageCarousel = ({ title, url }: MainPageCarouselProps) => {
   return (
     <div className="container mx-auto">
-      <h3 className="text-4xl mb-8 font-medium text-center ">{title}</h3>
+      <h3 className="text-4xl mb-8 font-medium text-center">{title}</h3>
 
       <Carousel
         opts={{
@@ -49,4 +49,4 @@ const HomepageCarousel = ({ title, url }: HomepageCarouselProps) => {
   );
 };
 
-export default HomepageCarousel;
+export default MainPageCarousel;
