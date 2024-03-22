@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { client, urlFor } from "../lib/sanity";
-import { AboutPage } from "../lib/interface";
 import { PortableText } from "@portabletext/react";
 
 async function getData() {
@@ -16,8 +15,14 @@ async function getData() {
   return data;
 }
 
+interface AboutData {
+  aboutTitle: string;
+  content: any;
+  aboutImage: string;
+}
+
 export default async function About() {
-  const data: AboutPage = await getData();
+  const data: AboutData = await getData();
 
   return (
     <>
