@@ -18,7 +18,13 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        '150': '150px',
+        '40': '40px',
+      },
       spacing: {
+        '30': '30px',
+        '68': '68px',
         '73': '73px',
         '100': '100px',
       },
