@@ -1,12 +1,12 @@
 export default {
     name: 'introduction',
     type: 'document',
-    title: 'Introduction',
+    title: 'Home page introduction',
     fields: [
         {
             name: 'title',
             type: 'string',
-            title: 'Introduction'
+            title: 'Title'
         },
         {
             name: 'subtitle',
