@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
-import style from "./MainPageCarousel.module.scss";
 
 interface MainPageCarouselProps {
   title: string;
@@ -42,7 +41,7 @@ const MainPageCarousel = ({ title, url }: MainPageCarouselProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={style.carouselButton} />
+        <CarouselPrevious />
         <CarouselNext />
       </Carousel>
     </div>
