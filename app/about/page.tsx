@@ -25,7 +25,7 @@ export default async function About() {
   return (
     <>
       <div className="w-full text-center mb-114">
-        <h1 className="text-4xl mb-24 font-medium">{data.title}</h1>
+        <h1 className="text-4xl mb-8 md:mb-24 font-medium">{data.title}</h1>
       </div>
       <div className="lg:float-right lg:text-right lg:w-1/2 lg:pr-4 lg:mb-0 sm:text-center">
         <Image

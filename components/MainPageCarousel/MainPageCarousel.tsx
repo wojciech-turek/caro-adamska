@@ -22,7 +22,7 @@ const MainPageCarousel = ({ title, url }: MainPageCarouselProps) => {
         opts={{
           align: "start",
         }}
-        className="w-full mb-100"
+        className="w-full mb-8 md:mb-100"
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (

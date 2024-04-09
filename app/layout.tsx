@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poiretOne.className}>
         <Header />
-        <div className="flex flex-wrap justify-center pt-16 pb-24 max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center pt-8 pb-12 md:pb-24 max-w-7xl mx-auto">
           {children}
         </div>
         <Footer />
