@@ -21,6 +21,8 @@ const config = {
       fontSize: {
         '150': '150px',
         '40': '40px',
+        '24': '24px',
+        '16': '16px',
       },
       spacing: {
         '30': '30px',
