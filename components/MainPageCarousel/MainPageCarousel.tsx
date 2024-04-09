@@ -28,15 +28,15 @@ const MainPageCarousel = ({ title, url }: MainPageCarouselProps) => {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <Link href={url}>
-                <div className="p-1">
+                <>
                   <Image
-                    className="rounded-lg"
+                    className="rounded-lg mx-auto"
                     width={395}
                     height={461}
                     src={"/1.jpeg"}
                     alt={"1"}
                   />
-                </div>
+                </>
               </Link>
             </CarouselItem>
           ))}

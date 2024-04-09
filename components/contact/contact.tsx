@@ -18,11 +18,11 @@ const Contact = () => {
             height={300}
             src={"/caro_adamska.jpeg"}
             alt="Caro Adamska"
-            className="rounded-lg overflow-hidden text-center"
+            className="rounded-lg overflow-hidden text-center mx-auto"
           />
           <div className="flex flex-wrap justify-center md:justify-start">
             <div className="">
-              <div className="mt-6 px-4 mb-6 md:mb-0">
+              <div className="mt-6 px-0 md:px-4 mb-6 md:mb-0">
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center">
                     <Image
