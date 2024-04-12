@@ -19,13 +19,13 @@ interface IntroductionData {
 }
 
 export default async function Introduction() {
-  const data: IntroductionData = await getData();
+  const { title, subtitle, description }: IntroductionData = await getData();
 
   return (
     <div className="w-full text-center mb-68">
-      <h1 className="text-150 font-medium text-center">{data.title}</h1>
-      <h2 className="text-40 mb-30 font-medium text-center">{data.subtitle}</h2>
-      <h2 className="text-40 font-medium text-center">{data.description}</h2>
+      <h1 className="text-150 font-medium text-center">{title}</h1>
+      <h2 className="text-40 mb-30 font-medium text-center">{subtitle}</h2>
+      <h2 className="text-40 font-medium text-center">{description}</h2>
     </div>
   );
 }
