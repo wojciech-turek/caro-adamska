@@ -1,22 +1,52 @@
+import { client, urlFor } from "../../app/lib/sanity";
 import Image from "next/image";
 import ContactForm from "../contactForm/ContactForm";
 
-const Contact = () => {
+async function getData() {
+  const query = `
+  *[_type == 'contact'] {
+    title, description, image, email, phone, instagramURL, messangerURL
+  }[0]
+  `;
+
+  const data = await client.fetch(query);
+  return data;
+}
+
+interface ContactData {
+  title: string;
+  description: string;
+  image: string;
+  email: string;
+  phone: string;
+  instagramURL: string;
+  messangerURL: string;
+}
+
+export default async function Contact() {
+  const {
+    title,
+    description,
+    image,
+    email,
+    phone,
+    instagramURL,
+    messangerURL,
+  }: ContactData = await getData();
+
   return (
     <div className="w-full text-center mb-114">
       <div className="px-8 py-4 md:px-8 md:py-0">
-        <h2 className="text-3xl font-medium text-center mb-5">Contact</h2>
-        <p className="mb-4 md:mb-10 text-16">
-          To contact me - use the below contact form or drop mi a direct message
-          via one of my personal channels.
-        </p>
+        <h3 className="text-4xl mb-5 font-medium text-center">{title}</h3>
+        <p className="mb-4 md:mb-10 text-16">{description}</p>
       </div>
       <div className="flex flex-wrap md:mt-16">
         <div className="w-full sm:w-1/3 px-8 mb:px-0">
           <Image
             width={300}
             height={300}
-            src={"/caro_adamska.jpeg"}
+            // src={"/caro_adamska.jpeg"}
+            src={urlFor(image).url()}
             alt="Caro Adamska"
             className="rounded-lg overflow-hidden text-center mx-auto"
           />
@@ -32,7 +62,7 @@ const Contact = () => {
                       alt="email"
                       className="mr-2"
                     />
-                    <p className="text-16">karolina.g.adamska@gmail.com</p>
+                    <a href={email}>{email}</a>
                   </div>
                   <div className="flex items-center">
                     <Image
@@ -42,7 +72,7 @@ const Contact = () => {
                       alt="phone"
                       className="mr-2"
                     />
-                    <p className="text-16">+48 510 593 718</p>
+                    <p className="text-16">{phone}</p>
                   </div>
                   <div className="flex items-center">
                     <Image
@@ -52,7 +82,7 @@ const Contact = () => {
                       alt="instagram"
                       className="mr-2"
                     />
-                    <p className="text-16">instagram.com/caroadamska</p>
+                    <a href={instagramURL}>{instagramURL}</a>
                   </div>
                   <div className="flex items-center">
                     <Image
@@ -62,7 +92,7 @@ const Contact = () => {
                       alt="messanger"
                       className="mr-2"
                     />
-                    <p className="text-16">caroadamskastylist</p>
+                    <a href={messangerURL}>{messangerURL}</a>
                   </div>
                 </div>
               </div>
@@ -70,13 +100,9 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex w-full sm:w-2/3 md:pl-12 px-8 md:px-0">
-          {/* <div className="w-full"> */}
           <ContactForm />
-          {/* </div> */}
         </div>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}
