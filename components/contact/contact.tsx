@@ -34,6 +34,11 @@ export default async function Contact() {
     messangerURL,
   }: ContactData = await getData();
 
+  const removeProtocolFromUrl = (url: string) =>
+    url.replace(/^https?:\/\//, "");
+
+  const extractUsernameFromUrl = (url: string) => url.split("/").pop();
+
   return (
     <div className="w-full text-center mb-114">
       <div className="px-8 py-4 md:px-8 md:py-0">
@@ -41,7 +46,7 @@ export default async function Contact() {
         <p className="mb-4 md:mb-10 text-16">{description}</p>
       </div>
       <div className="flex flex-wrap md:mt-16">
-        <div className="w-full sm:w-1/3 px-8 mb:px-0">
+        <div className="w-full md:w-1/3 px-8 mb:px-0">
           <Image
             width={300}
             height={300}
@@ -81,7 +86,9 @@ export default async function Contact() {
                       alt="instagram"
                       className="mr-2"
                     />
-                    <a href={instagramURL}>{instagramURL}</a>
+                    <a href={instagramURL}>
+                      {removeProtocolFromUrl(instagramURL)}
+                    </a>
                   </div>
                   <div className="flex items-center">
                     <Image
@@ -91,14 +98,16 @@ export default async function Contact() {
                       alt="messanger"
                       className="mr-2"
                     />
-                    <a href={messangerURL}>{messangerURL}</a>
+                    <a href={messangerURL}>
+                      {extractUsernameFromUrl(messangerURL)}
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex w-full sm:w-2/3 md:pl-12 px-8 md:px-0">
+        <div className="flex w-full md:w-2/3 md:pl-12 px-8 md:px-0">
           <ContactForm />
         </div>
       </div>
