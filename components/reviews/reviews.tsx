@@ -1,7 +1,10 @@
+import ReviewsCarousel from "../ReviewsCarousel/ReviewsCarousel";
+
 const Reviews = () => {
   return (
-    <div className="w-full text-center mb-114 px-8">
-      <h2 className="text-3xl font-medium text-center">Reviews</h2>
+    <div className="container mx-auto">
+      <h3 className="text-4xl mb-8 font-medium text-center">Reviews</h3>
+      <ReviewsCarousel />
     </div>
   );
 };
