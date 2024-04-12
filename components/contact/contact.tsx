@@ -45,7 +45,6 @@ export default async function Contact() {
           <Image
             width={300}
             height={300}
-            // src={"/caro_adamska.jpeg"}
             src={urlFor(image).url()}
             alt="Caro Adamska"
             className="rounded-lg overflow-hidden text-center mx-auto"
