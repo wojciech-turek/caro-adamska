@@ -53,11 +53,14 @@ export default async function CommercialCollabs({
       >
         <CarouselContent>
           {data.map((item, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 mx-2"
+            >
               <Link href={`/commercial-collabs/${item.slug.current}`}>
                 <>
                   <Image
-                    className="rounded-lg mx-auto"
+                    className="rounded-lg mx-auto h-400 lg:h-480"
                     width={395}
                     height={395}
                     src={urlFor(item.image).url()}

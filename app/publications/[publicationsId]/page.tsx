@@ -36,7 +36,6 @@ export default async function PublicationsDetails({
   const currentPublicationImages: FilteredDataData[] = data.filter(
     (item) => item.slug.current === params.publicationsId
   );
-  console.log("filteredData,", currentPublicationImages[0]);
 
   interface CurrentPublicationImages {
     image: string;
@@ -46,18 +45,20 @@ export default async function PublicationsDetails({
 
   return (
     <>
-      <div className="container mx-auto">
-        {gallery.map((image, index) => (
-          <Image
-            key={index}
-            className="rounded-lg mx-auto"
-            width={395}
-            height={395}
-            src={urlFor(image).url()}
-            alt={"/"}
-          />
-        ))}
-      </div>
+      {gallery.map((image, index) => (
+        <div className="mx-auto">
+          <div className="md:basis-1/2 lg:basis-1/3">
+            <Image
+              key={index}
+              className="rounded-lg h-480"
+              width={395}
+              height={300}
+              src={urlFor(image).url()}
+              alt={"/"}
+            />
+          </div>
+        </div>
+      ))}
     </>
   );
 }

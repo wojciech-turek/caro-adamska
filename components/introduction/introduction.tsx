@@ -22,10 +22,10 @@ export default async function Introduction() {
   const { title, subtitle, description }: IntroductionData = await getData();
 
   return (
-    <div className="w-full text-center mb-68">
-      <h1 className="text-150 font-medium text-center">{title}</h1>
-      <h2 className="text-40 mb-30 font-medium text-center">{subtitle}</h2>
-      <h2 className="text-40 font-medium text-center">{description}</h2>
+    <div className="container w-full text-center mb-30 md:mb-68">
+      <h1 className="text-40 lg:text-150 font-medium text-center">{title}</h1>
+      <h2 className="lg:text-40 mb-30 font-medium text-center">{subtitle}</h2>
+      <h2 className="lg:text-40 font-medium text-center">{description}</h2>
     </div>
   );
 }
