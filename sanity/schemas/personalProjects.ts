@@ -1,12 +1,31 @@
 export default {
-    name: 'personalProjects',
+    name: 'personal',
     type: 'document',
-    title: 'Personal Projects Page',
+    title: 'Personal Projects',
     fields: [
         {
-            name: 'title',
+            name: 'name',
             type: 'string',
-            title: 'Title'
+            title: 'Name'
+        },
+        {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: { source: 'name'}
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: { hotspot: true },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string'
+                }
+            ]
         },
         {
             name: 'gallery',

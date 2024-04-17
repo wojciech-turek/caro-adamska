@@ -1,7 +1,7 @@
 export default {
-    name: 'publications',
+    name: 'collabs',
     type: 'document',
-    title: 'Publications',
+    title: 'Commercial Collabs',
     fields: [
         {
             name: 'name',
