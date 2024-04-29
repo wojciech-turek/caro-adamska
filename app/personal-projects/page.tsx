@@ -43,7 +43,7 @@ export default async function PersonalProjects({
 
   return (
     <div className="container mx-auto">
-      <h3 className="text-4xl mb-8 font-medium text-center">{title}</h3>
+      <h3 className="text-4xl mb-8 font-black text-center">{title}</h3>
 
       <Carousel
         opts={{

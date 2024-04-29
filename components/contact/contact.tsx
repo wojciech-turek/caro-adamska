@@ -42,7 +42,7 @@ export default async function Contact() {
   return (
     <div className="w-full text-center mb-114">
       <div className="px-8 py-4 md:px-8 md:py-0">
-        <h3 className="text-4xl mb-5 font-medium text-center">{title}</h3>
+        <h3 className="text-4xl mb-5 font-black text-center">{title}</h3>
         <p className="mb-4 md:mb-10 text-16">{description}</p>
       </div>
       <div className="flex flex-wrap md:mt-16">
