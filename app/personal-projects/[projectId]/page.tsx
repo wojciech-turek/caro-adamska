@@ -20,8 +20,6 @@ interface FilteredData {
 export default async function PersonalProjectsDetails({
   params,
 }: PersonalProjectsDetailsProps) {
-  console.log("params", params);
-
   async function getData() {
     const query = `
     *[_type == 'personal'] {
@@ -48,7 +46,7 @@ export default async function PersonalProjectsDetails({
   return (
     <>
       {gallery.map((image, index) => (
-        <div className="mx-auto">
+        <div key={index} className="mx-auto">
           <div className="md:basis-1/2 lg:basis-1/3">
             <Image
               key={index}
