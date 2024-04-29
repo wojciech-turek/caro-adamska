@@ -8,7 +8,7 @@ const Header = () => {
     <header className="bg-salmon">
       <nav className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <div className="flex-shrink-0">
-          <Link className="text-base" href="/">
+          <Link className="text-24" href="/">
             Caro Adamska
           </Link>
         </div>
@@ -17,20 +17,20 @@ const Header = () => {
             <Link
               href="/about"
               className={
-                currentPath === "/about" ? "text-base underline" : "text-base"
+                currentPath === "/about" ? "text-24 underline" : "text-24"
               }
             >
               about
             </Link>
             <Link
               className={
-                currentPath === "/contact" ? "text-base underline" : "text-base"
+                currentPath === "/contact" ? "text-24 underline" : "text-24"
               }
               href="/contact"
             >
               contact
             </Link>
-            <Link className="text-base" href="/contact">
+            <Link className="text-24" href="/contact">
               en
             </Link>
           </div>
