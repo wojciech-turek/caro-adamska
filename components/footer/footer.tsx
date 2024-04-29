@@ -36,8 +36,16 @@ export default async function Footer() {
       <div className="container mx-auto flex flex-col gap-4">
         <div className="text-24">{name}</div>
         <div className="text-16">
-          <p>{email}</p>
-          <p>{phone}</p>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 justify-center">
+              <Image alt="email" width={16} height={16} src={"/envelope.png"} />
+              <p>{email}</p>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <Image alt="phone" width={16} height={16} src={"/phone.png"} />
+              <p>{phone}</p>
+            </div>
+          </div>
         </div>
         <div className="flex gap-4 justify-center items-center">
           <a href={instagramURL} target="_blank" rel="noopener noreferrer">
