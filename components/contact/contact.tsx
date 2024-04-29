@@ -52,11 +52,11 @@ export default async function Contact() {
             height={300}
             src={urlFor(image).url()}
             alt="Caro Adamska"
-            className="rounded-lg overflow-hidden text-center mx-auto"
+            className="rounded-lg overflow-hidden text-center mx-auto lg:mx-0"
           />
           <div className="flex flex-wrap justify-center md:justify-start">
             <div className="">
-              <div className="mt-6 px-0 md:px-4 mb-6 md:mb-0">
+              <div className="mt-6 px-0 mb-6 md:mb-0">
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center">
                     <Image
