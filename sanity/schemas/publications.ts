@@ -15,6 +15,18 @@ export default {
             options: { source: 'name'}
         },
         {
+            name: 'logo',
+            title: 'Logo',
+            type: 'image',
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string'
+                }
+            ]
+        },
+        {
             name: 'image',
             title: 'Image',
             type: 'image',

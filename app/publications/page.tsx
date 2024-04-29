@@ -12,7 +12,7 @@ import Link from "next/link";
 async function getData() {
   const query = `
   *[_type == 'publications'] {
-    image, slug, _id
+    image, slug, _id, logo
   }
   `;
 
@@ -30,10 +30,17 @@ interface SlugInterface {
   _type: string;
 }
 
+interface LogoInterface {
+  _type: string;
+  alt: string;
+  asset: any;
+}
+
 interface PublicationsData {
   image: string;
   slug: SlugInterface;
   _id: string;
+  logo: LogoInterface;
 }
 
 export default async function Publications({
@@ -66,6 +73,15 @@ export default async function Publications({
                     src={urlFor(item.image).url()}
                     alt={"1"}
                   />
+                  <div className="h-14">
+                    <Image
+                      className="rounded-lg mx-auto mt-6"
+                      width={200}
+                      height={50}
+                      src={urlFor(item.logo).url()}
+                      alt={item.logo.alt}
+                    />
+                  </div>
                 </>
               </Link>
             </CarouselItem>
