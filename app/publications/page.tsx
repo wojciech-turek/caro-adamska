@@ -1,11 +1,4 @@
 import { client, urlFor } from "@/app/lib/sanity";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,41 +43,29 @@ export default async function Publications({
 
   return (
     <div className="container mx-auto">
-      <h3 className="text-4xl mb-8 font-black text-center">{title}</h3>
-
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="w-full mb-8 md:mb-100"
-      >
-        <CarouselContent>
-          {data.map((item, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <Link href={`/publications/${item.slug.current}`}>
-                <>
-                  <Image
-                    className="rounded-lg mx-auto h-400 lg:h-480"
-                    width={395}
-                    height={395}
-                    src={urlFor(item.image).url()}
-                    alt={"1"}
-                  />
-                  <Image
-                    className="rounded-lg mx-auto mt-6 h-[54px]"
-                    width={200}
-                    height={50}
-                    src={urlFor(item.logo).url()}
-                    alt={item.logo.alt}
-                  />
-                </>
-              </Link>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      <h3 className="text-4xl font-black text-center">{title}</h3>
+      <div className="flex flex-wrap">
+        {data.map((item, index) => (
+          <div className="w-full md:w-1/2 lg:w-1/3 gap-2 py-2">
+            <Link key={index} href={`/publications/${item.slug.current}`}>
+              <Image
+                className="rounded-lg mx-auto h-400 lg:h-480"
+                width={395}
+                height={395}
+                src={urlFor(item.image).url()}
+                alt={"1"}
+              />
+              <Image
+                className="rounded-lg mx-auto mt-6 h-[54px]"
+                width={200}
+                height={50}
+                src={urlFor(item.logo).url()}
+                alt={item.logo.alt}
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

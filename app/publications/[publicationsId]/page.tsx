@@ -54,11 +54,11 @@ export default async function PublicationsDetails({
   const logo = currentPublicationImages[0].logo;
 
   return (
-    <>
+    <div className="">
       <div className="flex">
         <div className="mx-auto">
           <Image
-            className="rounded-lg text-center mb-10"
+            className="rounded-lg text-center mb-10 h-[54px]"
             width={200}
             height={50}
             src={urlFor(logo).url()}
@@ -66,22 +66,20 @@ export default async function PublicationsDetails({
           />
         </div>
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row flex-wrap">
         {gallery.map((image, index) => (
-          <div key={index} className="mx-auto">
-            <div className="md:basis-1/2 lg:basis-1/3">
-              <Image
-                key={index}
-                className="rounded-lg h-480 py-2 md:py-0"
-                width={395}
-                height={300}
-                src={urlFor(image).url()}
-                alt={"/"}
-              />
-            </div>
+          <div className="w-full md:w-1/2 lg:w-1/3 py-2 px-1">
+            <Image
+              key={index}
+              className="rounded-lg h-400 lg:h-480"
+              width={395}
+              height={395}
+              src={urlFor(image).url()}
+              alt={"/"}
+            />
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
