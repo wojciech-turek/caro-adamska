@@ -70,15 +70,13 @@ export default async function Publications({
                     src={urlFor(item.image).url()}
                     alt={"1"}
                   />
-                  <div className="h-14">
-                    <Image
-                      className="rounded-lg mx-auto mt-6"
-                      width={200}
-                      height={50}
-                      src={urlFor(item.logo).url()}
-                      alt={item.logo.alt}
-                    />
-                  </div>
+                  <Image
+                    className="rounded-lg mx-auto mt-6 h-[54px]"
+                    width={200}
+                    height={50}
+                    src={urlFor(item.logo).url()}
+                    alt={item.logo.alt}
+                  />
                 </>
               </Link>
             </CarouselItem>
