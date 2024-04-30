@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit} className="max-w md:max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="max-w lg:max-w-4xl mx-auto px-4">
         <div className="mb-4">
           <input
             type="text"
