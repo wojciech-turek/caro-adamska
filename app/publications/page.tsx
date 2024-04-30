@@ -60,10 +60,7 @@ export default async function Publications({
       >
         <CarouselContent>
           {data.map((item, index) => (
-            <CarouselItem
-              key={index}
-              className="md:basis-1/2 lg:basis-1/3 mx-2"
-            >
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <Link href={`/publications/${item.slug.current}`}>
                 <>
                   <Image
